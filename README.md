@@ -11,7 +11,7 @@ A FastAPI backend that analyzes customer reviews using OpenAI's GPT-4 to extract
 - **Real-time Processing**: Async processing for efficient review analysis
 
 
-<img width="600" height="3840" alt="deepseek_mermaid_20250827_b6f345" src="https://github.com/user-attachments/assets/3360cc61-ee31-4a29-bd2a-fc01ff1184ff" />
+<img width="auto" height="1000" alt="deepseek_mermaid_20250827_b6f345" src="https://github.com/user-attachments/assets/3360cc61-ee31-4a29-bd2a-fc01ff1184ff" />
 
 
 ## 📦 API Endpoints
