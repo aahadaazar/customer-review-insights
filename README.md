@@ -131,8 +131,8 @@ uv run main.py
 ```
 
 The API will be available at:
-API: http://localhost:8000
-Interactive Docs: http://localhost:8000/docs
+API: https://customer-review-insights-7zoq.onrender.com/
+Interactive Docs: https://customer-review-insights-7zoq.onrender.com/docs
 
 ## Project Structure
 

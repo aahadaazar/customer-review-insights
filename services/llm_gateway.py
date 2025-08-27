@@ -40,7 +40,7 @@ class LLMGateway:
 
             # 4. Parse, validate, and add the review_id
             analysis_result = self._parse_and_validate_response(
-                json_str, review_id, review_date, rating
+                json_str, review_id, review_date, rating, review_text
             )
 
             logger.info(f"Successfully analyzed review {review_id}")
@@ -75,7 +75,12 @@ class LLMGateway:
         return response_content
 
     def _parse_and_validate_response(
-        self, json_str: str, review_id: str, review_date: str, rating: str
+        self,
+        json_str: str,
+        review_id: str,
+        review_date: str,
+        rating: str,
+        review_text: str,
     ) -> AnalysisResult:
         """Parse JSON string and validate against our Pydantic model."""
         try:
@@ -83,6 +88,7 @@ class LLMGateway:
             data["review_id"] = review_id
             data["review_date"] = review_date
             data["rating"] = rating
+            data["original_text"] = review_text
             return AnalysisResult(**data)
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse JSON response: {json_str}")

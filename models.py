@@ -59,6 +59,7 @@ class AnalysisResult(BaseModel):
     review_id: str
     review_date: DateType
     rating: str
+    original_text: str
     overall_sentiment: str = Field(
         ...,
         description="The overall sentiment of the entire review. Must be 'positive', 'negative', or 'neutral'.",
